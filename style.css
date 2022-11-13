@@ -133,7 +133,7 @@ section {
 
 .header__logo {
   display: inline-block;
-  margin-right: 553px;
+  margin-right: auto;
 }
 
 .header__nav {
@@ -300,7 +300,6 @@ section {
 }
 
 .right-container {
-  display: flex;
   padding: 65px 60px;
   padding-right: 0;
   height: 295px;
@@ -312,19 +311,20 @@ section {
   margin-bottom: 32px;
 }
 
-.right-container__descr {
+.right-container-descr {
+  display: inline-block;
   max-width: 452px;
   margin-left: 50px;
 }
 
-.right-advantage__title {
+.right-advantage-title {
   margin: 0;
   margin-bottom: 8px;
   font: 700 24px / 30px var(--font);
 }
 
-.right-advantage__descr {
-  min-width: 450px;
+.right-advantage-descr {
+  max-width: 450px;
 }
 
 /* work */
@@ -439,7 +439,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 31px 0;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 }
@@ -629,6 +629,7 @@ footer {
 
 .footer__input {
   padding: 14px 24px;
+  margin-bottom: 25px;
   width: 100%;
   font: 400 16px / 32px var(--font);
   border: 0;
@@ -656,11 +657,7 @@ footer {
   color: var(--gray);
 }
 
-.footer__input:not(:last-child) {
-  margin-bottom: 25px;
-}
-
-textarea {
+textarea.footer__input {
   margin-bottom: 32px;
   min-height: 150px;
   resize: none;
@@ -673,7 +670,7 @@ textarea {
 }
 
 .footer__checkbox {
-  position: absolute;
+  position: relative;
   left: -24px;
   display: inline-block;
   z-index: -1;
