@@ -20,7 +20,42 @@
 
 @media (max-width: 1320px) {
     .header__nav {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        min-width: 250px;
+        height: 100vh;
+        z-index: 1000;
+        padding: 38px 50px;
+        background-color: white;
+        overflow-y: auto;
+        visibility: hidden;
+        transform: translateX(-120%);
+        transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .close-menu-btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 107px;
+        cursor: pointer;
+    }
+
+    .header__nav .header__nav__list {
+        flex-direction: column;
+    }
+
+    .header__nav .header__nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+
+    .header__nav--active {
+        visibility: visible;
+        transform: none;
     }
 
     .burger {
@@ -29,6 +64,35 @@
         justify-content: space-between;
         width: 30px;
         height: 23px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .burger:focus {
+        outline: 2px solid #FF9900;
+        outline-offset: 3px;
+    }
+
+    .burger:active {
+        outline: none;
+    }
+
+    .burger--active .burger-line {
+        background-color: #E1670E;
+    }
+
+    .burger--active .burger-line:nth-child(2) {
+        transform: translateX(5px);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .burger--active .burger-line:nth-child(3) {
+        transform: translateX(12px);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .stop-scroll {
+        overflow: hidden;
     }
 
     .header__search svg {
@@ -145,6 +209,10 @@
 
     .hero {
         padding-top: 40px;
+    }
+
+    .hero__container {
+        height: 668px;
     }
 
     .hero-content {
@@ -348,6 +416,27 @@
         padding: 10.5px 50px;
     }
 
+    .swiper {
+        border-radius: 24px;
+    }
+
+    .slide1 {
+        background-image: url('../evklid_img/hero_1_768.png');
+    }
+
+    .slide2 {
+        background-image: url('../evklid_img/hero_2_768.png');
+    }
+    
+    .slide3 {
+        background-image: url('../evklid_img/hero_3_768.png');
+    }
+
+    .hero__container {
+        border-radius: 8px;
+        height: 662px;
+    }
+
     .hero-content {
         padding: 160px 40px;
         height: auto;
@@ -444,16 +533,8 @@
         margin-bottom: 111px;
     }
 
-    .question:nth-child(2) .question__content {
-        padding-right: 30px;
-    }
-
-    .question:nth-child(3) .question__content {
-        padding-right: 40px;
-    }
-
     .question__content {
-        padding-right: 0px;
+        padding-right: 10px;
     }
 
     .footer__container {
@@ -513,11 +594,15 @@
         padding-top: 30px;
     }
 
+    .hero__container {
+        max-height: 450px;
+    }
+
     .hero-content {
         height: auto;
         padding: 60px 20px;
         border-radius: 16px;
-        background-image: url("evklid_img/1hero320.png");
+        background-image: url("../evklid_img/1hero320.png");
     }
 
     .hero__title {
@@ -591,14 +676,24 @@
     }
 
     .left-hover-button {
-        min-width: 158px;
-        min-height: 35px;
+        min-width: 165px;
+        min-height: 45px;
         font-size: 12px;
         line-height: 14px;
         padding: 12px 43px;
         border: 2px solid #FF9900;
         border-radius: 8px;
         color: #FF9900;
+    }
+
+    .left-hover-button:hover, .left-hover-button:focus {
+        color: white;
+        background-color: #FFB84D;
+    }
+
+    .left-hover-button:active {
+        color: white;
+        background-color: #E1670E;
     }
 
     .advantage-right {
@@ -804,6 +899,10 @@
         border-radius: 0 0 16px 16px;
     }
 
+    .header__nav .nav__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
     .header__container {
         padding: 17px 15px;
     }
@@ -813,15 +912,36 @@
         height: 35px;
     }
 
+    .search {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin: 0;
+        bottom: none;
+        translate: unset;
+    }
+
     .hero {
         padding-top: 30px;
     }
 
-    .hero-content {
+    .hero__container {
         height: 308px;
-        padding: 60px 0;
+    }
+
+    .swiper {
         border-radius: 16px;
-        background-image: url("evklid_img/1hero320.png");
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 5px;
     }
 
     .hero__title {
