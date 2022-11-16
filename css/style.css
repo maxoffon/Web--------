@@ -594,6 +594,11 @@ section {
 	transition-timing-function: ease;
 }
 
+.accordion__content:focus {
+  outline: 1px solid black;
+  outline-offset: 3px;
+}
+
 .accordion:focus {
   outline: none;
 }
