@@ -7,8 +7,8 @@
   font-weight: 400;
   font-style: normal;
   src: local('Montserrat-Regular'),
-  url('evklid_fonts/Montserrat-Regular.woff2') format('woff2'),
-  url('evklid_fonts/Montserrat-Regular.woff') format('woff');
+  url('../evklid_fonts/Montserrat-Regular.woff2') format('woff2'),
+  url('../evklid_fonts/Montserrat-Regular.woff') format('woff');
   font-display: swap;
 }
 
@@ -17,8 +17,8 @@
   font-weight: 600;
   font-style: normal;
   src: local('Montserrat-SemiBold'),
-  url('evklid_fonts/Montserrat-SemiBold.woff2') format('woff2'),
-  url('evklid_fonts/Montserrat-SemiBold.woff') format('woff');
+  url('../evklid_fonts/Montserrat-SemiBold.woff2') format('woff2'),
+  url('../evklid_fonts/Montserrat-SemiBold.woff') format('woff');
   font-display: swap;
 }
 
@@ -27,8 +27,8 @@
   font-weight: 700;
   font-style: normal;
   src: local('Montserrat-Bold'),
-  url('evklid_fonts/Montserrat-Bold.woff2') format('woff2'),
-  url('evklid_fonts/Montserrat-Bold.woff') format('woff');
+  url('../evklid_fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('../evklid_fonts/Montserrat-Bold.woff') format('woff');
   font-display: swap;
 }
 
@@ -37,23 +37,14 @@
   font-weight: 800;
   font-style: normal;
   src: local('Montserrat-ExtraBold'),
-  url('evklid_fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-  url('evklid_fonts/Montserrat-ExtraBold.woff') format('woff');
+  url('../evklid_fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+  url('../evklid_fonts/Montserrat-ExtraBold.woff') format('woff');
   font-display: swap;
-}
-
-:root {
-  --nav_gap: 85px;
-  --yellow_default: #FF9900;
-  --yellow_hover: #FFB84D;
-  --yellow_active: #E1670E;
-  --gray: #CACACA;
-  --font: "Montserrat", sans-serif;
 }
 
 body {
   min-width: 320px;
-  font: 400 16px / 32px var(--font);
+  font: 400 16px / 32px "Montserrat", sans-serif;
 }
 
 a {
@@ -88,7 +79,7 @@ section {
 
 .section-title {
   margin: 0;
-  font: 400 48px / 59px var(--font);
+  font: 400 48px / 59px "Montserrat", sans-serif;
 }
 
 .list-reset {
@@ -100,27 +91,27 @@ section {
 .button-default {
   margin: 0;
   padding: 25px 39px;
-  font: 700 23px / 28px var(--font);
+  font: 700 23px / 28px "Montserrat", sans-serif;
   border: 0;
   border-radius: 16px;
-  background-color: var(--yellow_default);
+  background-color: #FF9900;
   color: white;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .button-default:hover {
-  background-color: var(--yellow_hover);
+  background-color: #FFB84D;
 }
 
 .button-default:focus {
   outline: none;
-  background-color: var(--yellow_hover);
+  background-color: #FFB84D;
 }
 
 .button-default:active {
   outline: none;
-  background-color: var(--yellow_active);
+  background-color: #E1670E;
 }
 
 /* header */
@@ -204,22 +195,22 @@ section {
 
 .search-close svg {
   margin-top: 2px;
-  fill: var(--gray);
+  fill: #CACACA;
   transition: fill 0.2s ease-in-out;
 }
 
 .search-close svg circle {
   fill: transparent;
-  stroke: var(--gray);
+  stroke: #CACACA;
   transition: stroke 0.2s ease-in-out;
 }
 
 .search-close:hover svg{
-  fill: var(--yellow_default);
+  fill: #FF9900;
 }
 
 .search-close:hover svg circle{
-  stroke: var(--yellow_default);
+  stroke: #FF9900;
 }
 
 .search-close:focus {
@@ -227,13 +218,13 @@ section {
 }
 
 .search-close:focus svg{
-  fill: var(--gray);
-  outline: 2px solid var(--yellow_default);
+  fill: #CACACA;
+  outline: 2px solid #FF9900;
   outline-offset: 2px;
 }
 
 .search-close:focus svg circle{
-  stroke: var(--gray);
+  stroke: #CACACA;
 }
 
 .search-close:active svg {
@@ -272,7 +263,7 @@ section {
 
 .header__nav__link {
   position: relative;
-  font: 600 18px / 22px var(--font);
+  font: 600 18px / 22px "Montserrat", sans-serif;
   transition: color 0.1s ease-in-out;
 }
 
@@ -282,8 +273,8 @@ section {
   left: 0;
   bottom: -5px;
   width: 100%;
-  background-color: var(--yellow_default);
-  border: 1px solid var(--yellow_default);
+  background-color: #FF9900;
+  border: 1px solid #FF9900;
   transform: scaleX(0);
   transition: transform 0.1s ease-in-out, border 0.1s ease-in-out background-color 0.1s ease-in-out;
 }
@@ -293,18 +284,29 @@ section {
 }
 
 .header__nav__link:focus {
-  outline: 2px solid var(--yellow_default);
+  outline: 2px solid #FF9900;
   outline-offset: 3px;
 }
 
 .header__nav__link:active {
   outline: none;
-  color: var(--yellow_active);
+  color: #E1670E;
 }
 
 .header__nav__link:active::after {
-  border: 1px solid var(--yellow_active);
-  background-color: var(--yellow_active);
+  border: 1px solid #E1670E;
+  background-color: #E1670E;
+}
+
+.header__search {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.header__search:focus {
+  outline: none;
 }
 
 .header__search svg {
@@ -313,13 +315,13 @@ section {
   transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
 }
 
-.header__search svg:hover, .header__search:active {
-  fill: var(--yellow_default);
-  stroke: var(--yellow_default);
+.header__search:hover svg, .header__search:active svg{
+  fill: #FF9900;
+  stroke: #FF9900;
 }
 
-.header__search:focus {
-  outline: 2px solid var(--yellow_default);
+.header__search:focus svg {
+  outline: 2px solid #FF9900;
   outline-offset: 4px;
 }
 
@@ -358,14 +360,14 @@ section {
   max-width: 837px;
   margin: 0;
   margin-bottom: 24px;
-  font: 800 70px / 85px var(--font);
+  font: 800 70px / 85px "Montserrat", sans-serif;
   color: white;
 }
 
 .hero__descr {
   max-width: 790px;
   margin-bottom: 90px;
-  font: 700 24px / 29px var(--font);
+  font: 700 24px / 29px "Montserrat", sans-serif;
   color: white;
 }
 
@@ -376,7 +378,7 @@ section {
 }
 
 .about-us__descr {
-  font: 400 16px / 32px var(--font);
+  font: 400 16px / 32px "Montserrat", sans-serif;
   margin-bottom: 50px;
   max-width: 1235px;
 }
@@ -420,32 +422,32 @@ section {
   padding: 17px 35px;
   min-height: 60px;
   min-width: 175px;
-  font: 700 16px / 20px var(--font);
-  border: 3px solid var(--yellow_default);
+  font: 700 16px / 20px "Montserrat", sans-serif;
+  border: 3px solid #FF9900;
   background-color: transparent;
   transition: background-color 0.2s ease-in-out;
 }
 
 .left-hover-button:hover {
-  background-color: var(--yellow_default);
+  background-color: #FF9900;
 }
 
 .left-hover-button:focus {
   outline: none;
   border: none;
-  background-color: var(--yellow_default);
+  background-color: #FF9900;
 }
 
 .left-hover-button:active {
   border: none;
-  background-color: var(--yellow_active);
+  background-color: #E1670E;
 }
 
 .right-container {
   display: flex;
   padding: 65px 60px;
   height: 295px;
-  border: 1px solid var(--gray);
+  border: 1px solid #CACACA;
   border-radius: 32px;
 }
 
@@ -462,7 +464,7 @@ section {
 .right-advantage-title {
   margin: 0;
   margin-bottom: 8px;
-  font: 700 24px / 30px var(--font);
+  font: 700 24px / 30px "Montserrat", sans-serif;
 }
 
 .right-advantage-descr {
@@ -486,7 +488,7 @@ section {
 
 .button-step {
   padding: 0;
-  font: 400 18px / 22px var(--font);
+  font: 400 18px / 22px "Montserrat", sans-serif;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -494,18 +496,18 @@ section {
 }
 
 .button-step:hover {
-  color: var(--yellow_default);
+  color: #FF9900;
 }
 
 .button-step:focus {
-  outline: 2px solid var(--yellow_default);
+  outline: 2px solid #FF9900;
   outline-offset: 3px;
   color: black;
 }
 
 .button-step:active {
   outline: none;
-  color: var(--yellow_active);
+  color: #E1670E;
 }
 
 .button-step:not(:last-child) {
@@ -525,7 +527,7 @@ section {
 .left-title {
   margin: 0;
   margin-bottom: 8px;
-  font: 700 24px / 32px var(--font);
+  font: 700 24px / 32px "Montserrat", sans-serif;
 }
 
 .left-descr {
@@ -539,12 +541,12 @@ section {
 .button-show-more {
   padding: 20px 38px;
   margin-right: 32px;
-  font: 700 16px / 20px var(--font);
+  font: 700 16px / 20px "Montserrat", sans-serif;
 }
 
 .button-deal {
   padding: 20px 38px;
-  font: 400 16px / 20px var(--font);
+  font: 400 16px / 20px "Montserrat", sans-serif;
   background-color: transparent;
   border: 1px solid black;
   color: black;
@@ -620,7 +622,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 30.5px 0;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 }
@@ -631,8 +636,7 @@ section {
   left: 0;
   top: 0;
   width: 100%;
-  /*1px solid var(--gray);*/
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid #CACACA;
   opacity: 1;
   transition: border-top 0.2s ease-in-out;
 }
@@ -643,15 +647,14 @@ section {
   left: 0;
   bottom: -1px;
   width: 100%;
-  /*1px solid var(--gray);*/
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid #CACACA;
   opacity: 1;
   transition: border-bottom 0.2s ease-in-out;
 }
 
 .question:hover, .question:focus {
   outline: none;
-  color: var(--yellow_default);
+  color: #FF9900;
 }
 
 .question:active {
@@ -660,20 +663,20 @@ section {
 
 .question:hover::before, .question:focus::before {
   z-index: 1;
-  border-top: 1px solid var(--yellow_default);
+  border-top: 1px solid #FF9900;
 }
 
 .question:hover::after, .question:focus::after {
   z-index: 1;
-  border-bottom: 1px solid var(--yellow_default);
+  border-bottom: 1px solid #FF9900;
 }
 
 .question:active::before {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid #CACACA;
 }
 
 .question:active::after {
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid #CACACA;
 }
 
 .noAfter::after {
@@ -685,8 +688,9 @@ section {
 }
 
 .question__content {
-  display: inline-block;
-  font: 700 24px / 32px var(--font);
+  font: 700 24px / 32px "Montserrat", sans-serif;
+  text-align: left;
+  max-width: calc(100% - 50px);
 }
 
 .question ellipse, .question path{
@@ -694,7 +698,7 @@ section {
 }
 
 .question:hover ellipse, .question:focus ellipse{
-  fill: var(--yellow_default);
+  fill: #FF9900;
 }
 
 .question:hover path, .question:focus path{
@@ -712,7 +716,7 @@ section {
 }
 
 .question:active ellipse {
-  fill: var(--gray);
+  fill: #CACACA;
 }
 
 .question:active path {
@@ -751,24 +755,24 @@ footer {
 
 .footer__nav__link {
   width: 100%;
-  font: 600 18px / 36px var(--font);
-  color: var(--gray);
+  font: 600 18px / 36px "Montserrat", sans-serif;
+  color: #CACACA;
   transition: color 0.2s ease-in-out;
 }
 
 .footer__nav__link:hover {
-  color: var(--yellow_default);
+  color: #FF9900;
 }
 
 .footer__nav__link:focus {
-  outline: 2px solid var(--yellow_default);
+  outline: 2px solid #FF9900;
   outline-offset: 3px;
-  color: var(--gray);
+  color: #CACACA;
 }
 
 .footer__nav__link:active {
   outline: none;
-  color: var(--yellow_active);
+  color: #E1670E;
 }
 
 .footer__socials {
@@ -782,17 +786,17 @@ footer {
 }
 
 .social:hover {
-  fill: var(--yellow_default);
+  fill: #FF9900;
 }
 
 .social:focus {
   fill: #666;
-  outline: 2px solid var(--yellow_default);
+  outline: 2px solid #FF9900;
   outline-offset: 3px;
 }
 
 .social:active {
-  fill: var(--yellow_active);
+  fill: #E1670E;
   outline: none;
 }
 
@@ -802,7 +806,7 @@ footer {
 
 .footer__middle {
   width: 570px;
-  color: var(--gray);
+  color: #CACACA;
 }
 
 .footer__title {
@@ -818,11 +822,11 @@ footer {
   padding: 14px 24px;
   margin-bottom: 25px;
   width: 100%;
-  font: 400 16px / 32px var(--font);
+  font: 400 16px / 32px "Montserrat", sans-serif;
   border: 0;
   border-radius: 16px;
   background-color: #414141;
-  color: var(--gray);
+  color: #CACACA;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -841,7 +845,7 @@ footer {
 }
 
 .footer__input::placeholder {
-  color: var(--gray);
+  color: #CACACA;
 }
 
 textarea.footer__input {
@@ -871,6 +875,10 @@ textarea.footer__input {
   cursor: pointer;
 }
 
+.footer__checkbox:focus + label {
+  outline: 2px solid white;
+}
+
 .footer__checkbox + .footer__label::before {
   content: "";
   position: absolute;
@@ -878,7 +886,7 @@ textarea.footer__input {
   top: calc(50% - 1em / 2);
   width: 13px;
   height: 13px;
-  outline: 1px solid var(--gray);
+  outline: 1px solid #CACACA;
   background-color: transparent;
   border-radius: 2px;
 }
@@ -890,7 +898,7 @@ textarea.footer__input {
   top: calc(50% - 1em / 2);
   width: 13px;
   height: 13px;
-  outline: 1px solid var(--gray);
+  outline: 1px solid #CACACA;
   background-color: transparent;
   background-image: url("../evklid_img/check.svg");
   background-position: center;
@@ -901,7 +909,7 @@ textarea.footer__input {
 
 .footer__submit__button {
   padding: 19px 52px;
-  font: 700 16px / 20px var(--font);
+  font: 700 16px / 20px "Montserrat", sans-serif;
 }
 
 .footer__right {
@@ -913,5 +921,5 @@ textarea.footer__input {
 .footer__endtext {
   align-self: center;
   max-width: 363px;
-  color: var(--gray);
+  color: #CACACA;
 }

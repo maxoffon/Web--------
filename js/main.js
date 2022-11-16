@@ -53,9 +53,9 @@ new Accordion('.accordion-list', {
 	activeClass: 'accordion--active'
 });
 
-let questions = document.querySelectorAll(".question");
+let questions = document.querySelectorAll(".accordion");
 questions.forEach(elem => {
-  elem.addEventListener('click', () => {
+  elem.querySelector('.question').addEventListener('click', () => {
     let mark = elem.querySelector('svg');
     if (mark.classList.contains('rotation')) {
       mark.classList.toggle('reverse-rotation');
@@ -63,7 +63,8 @@ questions.forEach(elem => {
     else {
       mark.classList.toggle('rotation');
     }
-    elem.classList.toggle('noAfter');
+    elem.querySelector('.question').classList.toggle('noAfter');
+    elem.querySelector('.accordion__content').classList.toggle('hidden');
   });
 });
 

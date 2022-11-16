@@ -36,12 +36,20 @@
     }
 
     .close-menu-btn {
-        display: block;
+        display: inline;
         border: none;
         background-color: transparent;
         padding: 0;
         margin-bottom: 107px;
         cursor: pointer;
+    }
+
+    .close-menu-btn:focus {
+        outline: none;
+    }
+
+    .close-menu-btn:focus svg {
+        outline: 2px solid #FF9900;
     }
 
     .header__nav .header__nav__list {
@@ -322,7 +330,6 @@
     }
 
     .question__content {
-        width: calc(100% - 50px);
         line-height: 32px;
     }
 
@@ -805,7 +812,6 @@
     }
 
     .question__content {
-        width: calc(100% - 30px);
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
@@ -1137,10 +1143,10 @@
     }
 
     .question__content {
-        width: calc(100% - 30px);
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
+        max-width: calc(100% - 30px);
     }
 
     .question svg {
